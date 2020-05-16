@@ -19,7 +19,9 @@ resource "azurerm_api_management" "apim" {
       <forward-request />
     </backend>
     <outbound />
-    <on-error />
+    <on-error>
+      ${local.cors_on_error_xml}
+    </on-error>
     </policies>
 XML
   }
