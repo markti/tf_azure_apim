@@ -22,8 +22,8 @@ variable "apim_settings" {
 variable "cors_settings" {
   type = object({
 
-    allowed_origins = string
-    allowed_headers = string
+    allowed_origins = list(string)
+    allowed_headers = list(string)
 
   })
 }
