@@ -1,7 +1,7 @@
 
 
 resource "azurerm_api_management" "apim" {
-  name                = var.name
+  name                = var.apim_settings.name
   location            = var.environment.location
   resource_group_name = var.environment.resource_group_name
   publisher_name      = var.apim_settings.publisher_name
